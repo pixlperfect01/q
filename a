@@ -1,0 +1,11 @@
+function go(){
+  var iiii=0;
+  var a = document.getElementById("user-answer");
+  for(var iiiii=0;iiiii<Quizlet.learnGameData.remaining.length;iiiii++){
+    if(Quizlet.learnGameData.remaining[iiiii].word==temp4.innerText){
+      iiii=iiiii;
+    temp3.innerHTML=Quizlet.learnGameData.remaining[iiii].definition;
+    console.log(Quizlet.learnGameData.remaining[iiii].definition);
+    }
+  }
+}
