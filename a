@@ -1,11 +1,21 @@
 function go(){
   var iiii=0;
   var a = document.getElementById("user-answer");
+  var b = document.getElementsByClassName("qWord lang-en TermText")[0];
+  var c = document.getElementById("js-learnModeAnswerButton");
   for(var iiiii=0;iiiii<Quizlet.learnGameData.remaining.length;iiiii++){
-    if(Quizlet.learnGameData.remaining[iiiii].word==temp4.innerText){
+    if(Quizlet.learnGameData.remaining[iiiii].word==b.innerText){
       iiii=iiiii;
-    temp3.innerHTML=Quizlet.learnGameData.remaining[iiii].definition;
+    a.innerHTML=Quizlet.learnGameData.remaining[iiii].definition;
     console.log(Quizlet.learnGameData.remaining[iiii].definition);
+    c.click();
+    var e = Date.now();
+    while(1){
+      if(Date.now()-e>500){
+        break;
+      }
+    }
+    document.getElementsByClassName("UIButton LearnModeMain-anyKey")[0].click();
     }
   }
 }
